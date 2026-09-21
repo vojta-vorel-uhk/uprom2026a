@@ -13,5 +13,12 @@ public class Cviko01_Uloha03
 
         Scanner scanner = new Scanner(System.in);
         int h = scanner.nextInt();
+        int sum = 0;
+        int i = 0;
+        while(sum <= h){
+            i = i + 1;
+            sum = sum + i;
+        }
+        System.out.println(i);
     }
 }
