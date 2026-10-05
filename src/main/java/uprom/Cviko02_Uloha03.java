@@ -16,5 +16,10 @@ public class Cviko02_Uloha03
         double c = a + b;
 
         System.out.println("Výsledek: " + c);
+
+        if(c == 0.3){
+            System.out.println("Můžeme odstartovat letadlo");
+        }
     }
 }
+
