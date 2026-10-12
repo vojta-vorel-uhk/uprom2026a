@@ -8,8 +8,18 @@ public class Cviko03_Uloha04
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Uveďte daň z příjmu po slevách: ");
-        double hrubaMzda = scanner.nextDouble();
-
+        double dan = scanner.nextDouble();
+        System.out.println("Uveďte počet dětí:");
+        int pocetDeti = scanner.nextInt();
+        if(pocetDeti == 1){
+            dan = dan - 1267;
+        }
+        if(pocetDeti >= 2){
+            dan = dan - 1267 - 1860 - (pocetDeti-2)*2320;
+        }
+        if((dan < 0) && (dan > -100)){
+            dan = 0;
+        }
         // Doplň program tak, aby z daně po slevách odečetl ještě zvýhodnění na děti
         // Pokud vyjde záporné číslo, zachová se tato částka jako daňový bonus.
         // - 1. dítě: 1267 Kč měsíčně
@@ -21,6 +31,6 @@ public class Cviko03_Uloha04
         // - Hodnota měsíčního daňového bonusu musí převyšovat 100 Kč
 
         System.out.println("Prosím, zaplaťte následující finální daň z příjmu: ");
-        System.out.println("");
+        System.out.println(dan);
     }
 }
