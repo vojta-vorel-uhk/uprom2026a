@@ -13,12 +13,13 @@ public class Cviko06_Uloha04
         Scanner scanner = new Scanner(new File(path));
         while (scanner.hasNextLine()){
             String line = scanner.nextLine();
-            for(int i=0; i<line.length()-2; i++){
-                if(line.charAt(i) == 'A' && line.charAt(i+2)=='A'){
+            for(int i=0; i<line.length()-3; i++){
+                if(line.charAt(i) == 'A' && line.charAt(i+3)=='A'){
                     System.out.println(line);
                 }
             }
         }
         // Tip na doma: zařídit, aby např. řádek AAAAAAA se vypsal jenom jednou
+        // Tip na doma pro pokročilé: zjistit co je "regex" a využít metodu matches třídy String
     }
 }
