@@ -5,6 +5,16 @@ public class Cviko08_Uloha02
     public static void main(String[] args)
     {
         // Vypiš výsledek z metody pocetDni pro každý ze 12 měsíců (1 až 12)
+        System.out.println("leden:"+pocetDni(1));
+        System.out.println("únor:"+pocetDni(2));
+        System.out.println("březen:"+pocetDni(3));
+        System.out.println("duben:"+pocetDni(4));
+        //...
+        //NEBO:
+        for(int i=1; i<=12; i++){
+            System.out.println(i+": "+pocetDni(i));
+        }
+
     }
 
     public static int pocetDni(int mesic)
